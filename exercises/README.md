@@ -1,10 +1,32 @@
 ## Linux Basics
 
-Use `man <command>` to help find out how to use a command and what flags are needed to complete the tasks.
+_At any point you can use `man <command>` to help find out how to use a command and what flags are needed to complete the tasks or search google for examples._
 
 ### Download CSV files with `curl`
 
-Download the following files using `curl` command and save the content into files of the same name in this folder using the shell `>` redirect.
+Curl can be used to download files from the internet (`http` addresses - same as web pages).
+The structure of the command will be: `curl <http address>`.  Start with the following command:
+
+```shell
+curl https://data.neo4j.com/northwind/products.csv
+```
+
+You should see csv text content in the terminal window.
+
+Next we will use the Linux redirect character `>` to write the contents to a local file
+instead of printing to the console (console = terminal window).  The structure of a redirect is
+`<command> > <filename>` where `<command>` can be anything that prints text and `<filename>`
+will be the name and extension of the file you want to save the text into.
+
+Start with the following command:
+
+```shell
+ls -al > list.txt
+```
+
+Now check the contents of `list.txt`
+
+Now combine the above `curl` and `>` redirect examples and download the following files into your local folder. 
 
 ```shell
 https://data.neo4j.com/northwind/products.csv
