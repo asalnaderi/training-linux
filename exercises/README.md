@@ -36,30 +36,54 @@ https://data.neo4j.com/northwind/suppliers.csv
 
 ### Get line count using `wc`
 
+`wc` is a word count command.
+By default, it will count the number of words in a file, but you can use the `-l` (line count) flag to count lines instead of words.
+
+Start with the following command:
+
+```shell
+wc products.csv
+```
+
 * Find the command needed to count the number of lines (not words) in each file.
 * Find the command needed to count the number of lines (not words) in all files in one command.
 
+
 ### Use the `head` and `tail` commands
 
-* Use the `head` command on your downloaded `products.csv`
-* Use the `tail` command on your downloaded `products.csv`
-* Understand the difference between these two commands
+By default, `head` show the first 10 lines of a file, whilst `tail` shows the last 10 lines of a file.
+
+Start with the following commands to help understand the difference:
+
+```shell
+head products.csv
+```
+
+```shell
+tail products.csv
+```
+
+Using the `-n <line count>` flag:
+
 * Find the command to print the first 5 lines of `products.csv`
 * Find the command to print the last 5 lines of `products.csv`
 
+
 ### Use the `tail` to follow a text file contents
 
-In one terminal window run the `tail -f <filename>` command on the `categories.csv` file.
-This should show the contents but no return the cursor back to the terminal window.
+`tail` can be used to 'follow' the contents of a file as it gets written to and changes.
 
-* Open another terminal window
-* `cd` to your `training-linux` folder
+In one terminal window run the `tail -f <filename>` command on the `categories.csv` file.
+This should show the contents but not return the cursor back to the terminal window.
+
+* Open another terminal window (place them side-by-side if you can)
+* `cd` to your `training-linux` folder containing the downloaded `categories.csv` file
 * Open to edit the `categories.csv` file using `nano`
 * Move the cursor to the line below the last entry
 * Add the following line `9,Burgers,"Burgers and chips",0`
 * Save the change and exit
 
-Return to your original terminal window (running the `tail` command) and see what changes
+Return to your original terminal window (running the `tail` command) and see what changes.
 
 In your second terminal window that you used for `nano` command run the following command:
 
