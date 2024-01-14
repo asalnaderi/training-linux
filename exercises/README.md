@@ -13,7 +13,7 @@ curl https://data.neo4j.com/northwind/products.csv
 
 You should see csv text content in the terminal window.
 
-Next we will use the Linux redirect character `>` to write the contents to a local file
+Next we will use the Linux redirect character ` > ` to write the contents to a local file
 instead of printing to the console (console = terminal window).  The structure of a redirect is
 `<command> > <filename>` where `<command>` can be anything that prints text and `<filename>`
 will be the name and extension of the file you want to save the text into.
@@ -26,7 +26,7 @@ ls -al > list.txt
 
 Now check the contents of `list.txt`
 
-Now combine the above `curl` and `>` redirect examples and download the following files into your local folder. 
+Now combine the above `curl` and ` > ` redirect examples and download the following files into your local folder. 
 
 ```shell
 https://data.neo4j.com/northwind/products.csv
@@ -85,10 +85,15 @@ This should show the contents but not return the cursor back to the terminal win
 
 Return to your original terminal window (running the `tail` command) and see what changes.
 
-In your second terminal window that you used for `nano` command run the following command:
+In your second terminal window (that you used for `nano` command) we will 'append' a new 
+line to the `categoroes.csv` file using the Linux redirect ` >> `.  Note a single ` > `
+redirect character will 'create' or 'overwrite' a file, whereas the ` >> ` redirect characters
+will 'create' or 'append' a file (add the text to the end of the file if it already exists).
+
+Try the following command:
 
 ```shell
-$ echo "10,Steak,\"Steak and chips\",0" >> categories.csv
+echo "10,Steak,\"Steak and chips\",0" >> categories.csv
 ```
 
 * `cat` your `categories.csv` to see the content and understand what happened
