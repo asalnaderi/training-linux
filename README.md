@@ -25,3 +25,22 @@ _Bonus points for making use of Markdown formatting tricks like links, Bullet li
 
 
 
+# General Concepts
+
+# 'Linux':
+Linux is a open source Unix operating system based on the Linux kernal.
+
+# 'Unix':
+Linux is a clone of Unix...
+
+# 'Kernel':
+The kernel is a computer program at the core of a computer's operating system that manages operation of computer and hardware.
+
+# 'Interpreter':
+Interpreter translates the program line by line into machin code...
+
+# 'Complier':
+Complier scans the whole program and converts it into machin code...
+
+# 'Shell scripting':
+it is a text file which contain list or series of command or statements to be executed.
