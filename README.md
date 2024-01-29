@@ -40,15 +40,42 @@ _Bonus points for making use of Markdown formatting tricks like links, Bullet li
 | `AWK`| programming language which also executes operations on a line-by-line basis just like Unix utilities |
 | `wildcards` | A wildcard is a symbol that takes the place of an unknown character or set of characters. Commonly used wildcards are the asterisk ( * ) and the question mark ( ? ) |
 |`/etc directory`| The /etc (et-see) directory is where a Linux system's configuration files live. It stores storage system configuration files, executables required to boot the system, and some log file |
+|`filesystem`| group of directories which we can drow it upside down tree |
+|`~`| represent the user's home directory |
+
+
+
+# root or / or filesystem
+
+| Concepts  | Description |
+| --- | --- |
+| `/Bin`| bash, car, chmod, cp, date, echo, grep and ...|
+| `/etc`| crontab, fonts, fstab, Host.conf, Hostname, Host and...|
+| `/home`| /John, /Asal, /Roy and ...|
+| `/var`|/cach, /lib, /lock, /log, /opt and ...|
 
 
 
 
 # Commands
 
-| Commands  | Description |
+| Commands and flags  | Description |
 | --- | --- |
 | `ls` | List the files and folders of the **location currently opened** in the terminal. Many times used as *ls -lah* which shows hidden files as well as it converts file-sizes to a human-readable form |
+|`ls -l`| provide long version of listing|
+|`ls -lh`| provid human readable listing|
+|`\s -a` `ls-la` | provide all files even the hidden files| 
+|`ls -lt`| sort files with time modification |
+|`ls -ltr`| reverse listing ordered by time|
+|`ls -lS`| sort files by size| 
+|`..`| will get us to parent directroty of current one|
+|`.`| represent the directory theat we are curently in |
+
+
+# Commands
+
+| Concepts  | Description |
+| --- | --- |
 |`cd`| Change directory. Allows you to move in your disk from one location to another |
 |`pwd`| Change directory. Allows you to move in your disk from one location to another |
 |`mkdir`| Creates a new folder under the currently opened location (single folder) |
@@ -73,12 +100,15 @@ _Bonus points for making use of Markdown formatting tricks like links, Bullet li
 
 | Commands  | Description |
 | --- | --- |
-|     |     |
-|     |     |
-|     |     |
-|     |     |
-|     |     |
-|     |     |
+| `cd /bin` | If i want to get to bin directory i would write this command|
+| `cd` | to back to my home durectory i can write cd with no arguments also i can write full command **(cd /home/Asal)**|
+|`hyphen` | **(cd -)** means get back me to the directory which i was|
+|`ls -l`| print all list of directory which we currently in|
+|`cd name of the file`| move you to the directory of intrest|
+|`cd ..`|to get out of the current directory|
+|`tab`| outo completion|
+|`setopt auto_cd` `auto _cd`| change directory just by writing the name of directory and to get back, just need to write two dots ...**it cancle auto command** |
+|`
  
 
 
@@ -107,6 +137,19 @@ _Bonus points for making use of Markdown formatting tricks like links, Bullet li
  ### diffrent between cat & echo:
  
       * cat is for listing contents of any file. echo is for listing value of some variable. Besides, echo without any value is used to insert a new line in many shell scripts
+
+
+       
+ ### Globbing:
+ 
+      * pattern matching(Bash) and file name generation(zshell).
+      * we use some special characters(Wildcards) to creat pattern which will expanded by shel;  
+      * asterisk *
+      * @
+      * carent ^
+      * Bracket [ ] 
+      *Bracket [ ] 
+
       
       
 **SED or stream editor:**
@@ -118,7 +161,6 @@ Replacing strings and files is the most popular use of SED.
 |     2| pattern space|
 |     3| hold buffer|
 |     4| output stream
-
 
 
 
