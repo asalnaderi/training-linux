@@ -57,6 +57,7 @@ _Bonus points for making use of Markdown formatting tricks like links, Bullet li
 
 
 
+
 # Commands
 
 | Commands and flags  | Description |
@@ -70,6 +71,31 @@ _Bonus points for making use of Markdown formatting tricks like links, Bullet li
 |`ls -lS`| sort files by size| 
 |`..`| will get us to parent directroty of current one|
 |`.`| represent the directory theat we are curently in |
+|`ls d*`| asterisk informs the shell that we want to see files which have some especific character in this example **d** |
+|`ls d D*` |     |
+|`echo D*` | just print the path witch we pass|
+|`setopt no_nomatch`|    |
+|`setopt csh_null_glob` | when we write a command to expand a pattern and you just have a one pattern match with pattern of intrest, shell can not give you any error because by this command you disabled the old pattern other hand to remedy the errors |
+|`echo *s`| print the file whitch end with **s**|
+|`echo s*` | print the file whitch start with **s**|
+|` echo *.jpg`| when we just want to see specific dile for example .jpg |
+|`ls *.*`| when we wan to see all files that end with an extension |
+|`ls *.?*`| in order to make sure to see all files with one extention, we would use ? |
+|`ls *.???*`| we use it to see 3 letters extension |
+|`ls [ ]` | we use this command when we want to see the file which start with especific letter or number,we put letter or number in the brackets|
+|` ls [ ]* [ ]*`|      |
+|` ls file[1-4]` |     |
+|` ^` | reverse the pattern. when yoy write it at the first of the command, means you are loking for file which doesnt have that especific character| 
+|`[AB] * (.jpg|.txt|.mp4)`| this is other alternative to specific file with some special charachter also especific extention|
+|` ls -l *(.)` | dot in paranteses means just show the regular files, no special files no directories|
+|`ls -l *(/)`| just shows the directories |
+|`ls -l *(*)` | shows executable files |
+|` ls -l * (@)` | shows symbolic links |
+|`ls -ldh *(LK+2)`| show s all file bigger than 2KB| 
+
+
+
+
 
 
 # Commands
@@ -95,6 +121,11 @@ _Bonus points for making use of Markdown formatting tricks like links, Bullet li
 |`tail`| will output the first part of the file |
 |`head`| will output the first part of the file |
 |`àlias`| lets you create a shortcut name for a command, file name, or any shell text |
+
+
+
+
+
 
 # Commands Exaples
 
@@ -134,23 +165,28 @@ _Bonus points for making use of Markdown formatting tricks like links, Bullet li
 - [ ] -w (which matches whole words only)
 - [ ] -v (invert; this lists only the lines that do not match the pattern)
 
- ### diffrent between cat & echo:
+
+
+ > [!NOTE]
+> diffrent between cat & echo: cat is for listing contents of any file. echo is for listing value of some variable. Besides, echo without any value is used to insert a new line in many shell scripts
+
  
-      * cat is for listing contents of any file. echo is for listing value of some variable. Besides, echo without any value is used to insert a new line in many shell scripts
 
 
        
  ### Globbing:
- 
-      * pattern matching(Bash) and file name generation(zshell).
-      * we use some special characters(Wildcards) to creat pattern which will expanded by shel;  
-      * asterisk *
-      * @
-      * carent ^
-      * Bracket [ ] 
-      *Bracket [ ] 
+   
+ * pattern matching(Bash) and file name generation(zshell)
+ * we use some special characters(Wildcards) to creat pattern which will expanded by shel
+ * asterisk *
+ * @
+ * carent ^
+ * Bracket [ ] 
 
       
+
+
+
       
 **SED or stream editor:**
 Replacing strings and files is the most popular use of SED. 
