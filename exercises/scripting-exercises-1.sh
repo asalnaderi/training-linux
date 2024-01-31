@@ -1,3 +1,3 @@
 #!/bin/zsh
-echo $USER
+echo My USER is "$USER" and I am learning so much
 
