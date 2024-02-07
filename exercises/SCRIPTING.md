@@ -98,3 +98,54 @@ echo $USER\'s age is $MY_AGE but I look younger
 
 > Exercise : Add another local variable called `FAVORITE_COLOR` with a text value of your favorite color,
 > and `echo` the value with some text before and after the value.  Output the color value in single quotes.
+
+
+#### Step 3 Understanding Script Arguments
+
+* 'Arguments' (also called 'Parameters') are _values passed into_ a command or script
+* The command `ls` has no arguments, whereas the command `ls -al` has one argument (`-al`)
+
+##### Arguments in shell scripts
+
+Shell scripts can reference 'Parameter Arguments' in a similar way to 'Variables'
+but instead of using a name they use an index number
+e.g. `$1` to access the first argument passed to the script.
+
+> Create a new script `arguments-exercises-1.sh` with nano and place the following code into it:
+
+```shell
+#!/bin/bash
+
+echo This scripts filename is $0
+echo This scripts was passed $# arguments
+echo This scripts 1st argument value is $1
+echo This scripts 2nd argument value is $2
+echo This scripts 3rd argument value is $3
+echo This scripts 4th argument value is $4
+echo This scripts 5th argument value is $5
+echo All arguments passed to the script are \'$*\'
+
+```
+
+> Remember to run the `chmod 777` command on the arguments-exercises-1.sh file so it can be executed
+
+> Run `./arguments-exercises-1.sh`
+
+> You should not have any errors, you should see the current logged in user and other text
+
+* Notice how the first line shows the path and script filename used to execute the script using the `$0` reference
+* Notice how the second line shows the number of arguments passed using the `$#` reference
+* Notice how there are no arguments as we didn't pass any
+
+> Run `./arguments-exercises-1.sh this course is super amazing`
+
+* Notice how each argument can be referenced by its index value, starting with `$1` for the first argument passed
+
+> Exercise : At the bottom of the file, add a local variable called `FIRST` and assign the value 'The first argument value is'
+> with the value of first argument at the end of the text.  The `echo` the value of your variable `FIRST`
+
+* The output should now show an extra line at the bottom of `The first argument value is this` (using same above arguments)
+
+> Exercise : Update the `FIRST` variable to show the value in single quotes
+
+* The output should now show an extra line at the bottom of `The first argument value is 'this'` (using same above arguments)
